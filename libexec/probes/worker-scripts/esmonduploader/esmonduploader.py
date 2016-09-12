@@ -95,7 +95,7 @@ class EsmondUploader(object):
         self.dq = dq
         if self.dq != None and self.dq!='None':
             try:
-                self.mq = DQS(path=self.dq)
+                self.mq = DQS(path=self.dq, granularity=5)
             except Exception as e:
                 self.add2log("Unable to create dirq %s, exception was %s, " % (self.dq, e))
     
